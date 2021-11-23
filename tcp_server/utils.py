@@ -10,7 +10,7 @@ def correct_format(data: str) -> Tuple[str, str]:
     """Change data representation."""
     # BBBB NN HH:MM:SS.zhq GG\r\n
     participant_number, chanel_id, time, group_id = data.strip().split()
-
+    # may be here you needed a validation
     return f"Спортсмен, нагрудный номер {participant_number} прошёл \
 отсечку {chanel_id} в {time[:-2]}",  group_id
 
